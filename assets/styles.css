@@ -340,6 +340,9 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 .psr div:nth-child(2) h4::before { background: var(--pop); }
 .psr div:nth-child(3) h4::before { background: var(--sun); }
 .psr p { margin: 0; font-size: 15px; color: var(--ink-2); }
+.psr.four { grid-template-columns: repeat(4, 1fr); }
+.psr div:nth-child(4) h4::before { background: var(--mint); }
+@media (max-width: 1000px) { .psr.four { grid-template-columns: repeat(2, 1fr); } }
 
 .products { margin-top: 28px; }
 .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -361,7 +364,7 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 @media (max-width: 760px) {
   .initiative-head { grid-template-columns: 1fr; gap: 16px; }
   .metrics { text-align: left; grid-template-columns: repeat(2, 1fr); }
-  .psr, .product-grid, .product-grid.three { grid-template-columns: 1fr; gap: 16px; }
+  .psr, .psr.four, .product-grid, .product-grid.three { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* ---------- Artifacts ---------- */
