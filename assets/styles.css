@@ -262,7 +262,7 @@ body.weird h1, body.weird h2, body.weird h3 {
   font-family: var(--serif); font-style: italic; font-size: 22px;
   padding: 12px 0;
 }
-.marquee .track { display: inline-flex; gap: 40px; animation: scroll 40s linear infinite; padding-left: 40px; }
+.marquee .track { display: inline-flex; gap: 40px; animation: scroll 70s linear infinite; padding-left: 40px; }
 .marquee span::after { content: "✺"; margin-left: 40px; color: var(--sun); font-style: normal; }
 @keyframes scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
