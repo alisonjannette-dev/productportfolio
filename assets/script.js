@@ -111,8 +111,18 @@
     });
   });
 
+  // Tags on each card filter the library too
+  document.querySelectorAll(".type-tag").forEach(function (tag) {
+    tag.addEventListener("click", function () {
+      var btn = document.querySelector('.filter[data-filter="' + tag.getAttribute("data-filter") + '"]');
+      if (!btn) return;
+      btn.click();
+      btn.parentNode.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
+
   // Artifacts that don't have a real file yet
-  document.querySelectorAll('a.artifact[href="#"]').forEach(function (a) {
+  document.querySelectorAll('.artifact a[href="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
       e.preventDefault();
       toast("This one's available on request — just ask!");

@@ -339,7 +339,8 @@
     <!--
       To add an artifact:
         1. Put the file in /artifacts (PDF works best), or use a link (Google Doc, Slides, Figma…).
-        2. Copy one <a class="artifact"> block and set href + data-type.
+        2. Copy one <article class="artifact"> block, set the card-link href, data-type, the tag's data-filter, and the date.
+        Keep cards newest first.
       data-type options: deck | writing | talk
       Leave href="#" to show "available on request" instead of a link (use this for confidential work).
     -->
@@ -361,62 +362,85 @@
         </div>
 
         <div class="artifact-grid">
-          <a class="artifact" data-type="deck" href="#">
-            <div class="thumb"><span class="kind">Strategy</span></div>
+          <article class="artifact" data-type="talk">
             <div class="body">
-              <h3>2025 data product strategy</h3>
-              <p>Candid's data product strategy for 2025: the product portfolio, OKRs, guiding principles, and quarterly roadmaps across APIs, datasets and data marketplaces (Snowflake, ADX, Databricks), the developer portal, and Candid Labs. Built from interviews with 50+ users and input from 20+ strategic partners.</p>
-              <div class="meta"><span>Deck · 15 slides · Candid</span><span class="go">On request</span></div>
-            </div>
-          </a>
-          <a class="artifact" data-type="deck" href="artifacts/candid-ab488-giving-platform-collaborative-2024.pdf" target="_blank" rel="noopener">
-            <div class="thumb"><span class="kind">Deck</span></div>
-            <div class="body">
-              <h3>Candid API for California AB 488 charity status</h3>
-              <p>Presented at the Giving Platform Collaborative in June 2024 to introduce donation platforms to the new AB 488 verification endpoint: the regulation, California data sources, sample API responses, the roadmap, and how to get started.</p>
-              <div class="meta"><span>Deck · 13 slides · Candid</span><span class="go">View ↗</span></div>
-            </div>
-          </a>
-          <a class="artifact" data-type="talk" href="artifacts/accuweather-transportation-logistics-webinar-2026.pdf" target="_blank" rel="noopener">
-            <div class="thumb"><span class="kind">Speaking</span></div>
-            <div class="body">
-              <h3>AccuWeather 2026 Transportation &amp; Logistics webinar</h3>
+              <div class="date">Jul 2026</div>
+              <h3><a class="card-link" href="artifacts/accuweather-transportation-logistics-webinar-2026.pdf" target="_blank" rel="noopener">AccuWeather 2026 Transportation &amp; Logistics webinar</a></h3>
               <p>The slides I presented at AccuWeather's industry webinar on how better weather intelligence helps organizations balance safety, efficiency, and customer experience: the AccuWeather Data Suite, use cases by industry, a transportation and logistics deep dive, and integration patterns.</p>
-              <div class="meta"><span>Slides · 4 pages · 2026</span><span class="go">View ↗</span></div>
+              <div class="meta">
+                <button class="type-tag" type="button" data-filter="talk" title="Show all Speaking">Speaking</button>
+                <span class="src">Slides · 4 pages</span>
+                <span class="go">View ↗</span>
+              </div>
             </div>
-          </a>
-          <a class="artifact" data-type="talk" href="https://www.peakgrantmaking.org/insights/exploring-how-to-share-and-reuse-nonprofit-data/" target="_blank" rel="noopener">
-            <div class="thumb"><span class="kind">Panel</span></div>
+          </article>
+          <article class="artifact" data-type="writing">
             <div class="body">
-              <h3>Exploring how to share and reuse nonprofit data</h3>
-              <p>A PEAK Grantmaking panel on reusing nonprofit data to save nonprofits time. The blog post quotes what I shared.</p>
-              <div class="meta"><span>PEAK Grantmaking</span><span class="go">Read ↗</span></div>
-            </div>
-          </a>
-          <a class="artifact" data-type="writing" href="https://www.accuweather.com/en/blogs-webinars/how-clean-accessible-data-powers-agentic-ai-workflows-and-better-business-decisions/1911683" target="_blank" rel="noopener">
-            <div class="thumb"><span class="kind">Writing</span></div>
-            <div class="body">
-              <h3>How clean, accessible data powers agentic AI workflows and better business decisions</h3>
+              <h3><a class="card-link" href="https://www.accuweather.com/en/blogs-webinars/how-clean-accessible-data-powers-agentic-ai-workflows-and-better-business-decisions/1911683" target="_blank" rel="noopener">How clean, accessible data powers agentic AI workflows and better business decisions</a></h3>
               <p>The shifts I'm seeing across the analytics and data landscape, drawn from conversations with customers, partners, and peers, including at the Databricks Data + AI Summit, and why clean, accessible data is the foundation for agentic AI.</p>
-              <div class="meta"><span>AccuWeather blog</span><span class="go">Read ↗</span></div>
+              <div class="meta">
+                <button class="type-tag" type="button" data-filter="writing" title="Show all Writing">Writing</button>
+                <span class="src">AccuWeather blog</span>
+                <span class="go">Read ↗</span>
+              </div>
             </div>
-          </a>
-          <a class="artifact" data-type="writing" href="https://candid.issuelab.org/resource/candid-annual-report-2023-reimagining-candid.html" target="_blank" rel="noopener">
-            <div class="thumb"><span class="kind">Writing</span></div>
+          </article>
+          <article class="artifact" data-type="deck">
             <div class="body">
-              <h3>Candid Annual Report 2023: Reimagining Candid</h3>
+              <h3><a class="card-link" href="#">2025 data product strategy</a></h3>
+              <p>Candid's data product strategy for 2025: the product portfolio, OKRs, guiding principles, and quarterly roadmaps across APIs, datasets and data marketplaces (Snowflake, ADX, Databricks), the developer portal, and Candid Labs. Built from interviews with 50+ users and input from 20+ strategic partners.</p>
+              <div class="meta">
+                <button class="type-tag" type="button" data-filter="deck" title="Show all Strategy &amp; decks">Strategy</button>
+                <span class="src">Deck · 15 slides · Candid</span>
+                <span class="go">On request</span>
+              </div>
+            </div>
+          </article>
+          <article class="artifact" data-type="deck">
+            <div class="body">
+              <div class="date">Jun 2024</div>
+              <h3><a class="card-link" href="artifacts/candid-ab488-giving-platform-collaborative-2024.pdf" target="_blank" rel="noopener">Candid API for California AB 488 charity status</a></h3>
+              <p>Presented at the Giving Platform Collaborative in June 2024 to introduce donation platforms to the new AB 488 verification endpoint: the regulation, California data sources, sample API responses, the roadmap, and how to get started.</p>
+              <div class="meta">
+                <button class="type-tag" type="button" data-filter="deck" title="Show all Strategy &amp; decks">Deck</button>
+                <span class="src">Deck · 13 slides · Candid</span>
+                <span class="go">View ↗</span>
+              </div>
+            </div>
+          </article>
+          <article class="artifact" data-type="writing">
+            <div class="body">
+              <h3><a class="card-link" href="https://candid.issuelab.org/resource/candid-annual-report-2023-reimagining-candid.html" target="_blank" rel="noopener">Candid Annual Report 2023: Reimagining Candid</a></h3>
               <p>Co-wrote with the VP of Influence: the year's highlights from the Demographics via Candid campaign.</p>
-              <div class="meta"><span>Annual report</span><span class="go">Read ↗</span></div>
+              <div class="meta">
+                <button class="type-tag" type="button" data-filter="writing" title="Show all Writing">Writing</button>
+                <span class="src">Annual report</span>
+                <span class="go">Read ↗</span>
+              </div>
             </div>
-          </a>
-          <a class="artifact" data-type="writing" href="https://candid.org/blogs/4-free-ways-to-access-candids-demographic-data/" target="_blank" rel="noopener">
-            <div class="thumb"><span class="kind">Writing</span></div>
+          </article>
+          <article class="artifact" data-type="writing">
             <div class="body">
-              <h3>4 free ways to access Candid's demographic data</h3>
+              <h3><a class="card-link" href="https://candid.org/blogs/4-free-ways-to-access-candids-demographic-data/" target="_blank" rel="noopener">4 free ways to access Candid's demographic data</a></h3>
               <p>A blog post on the four ways to access demographic data, and what each one is for.</p>
-              <div class="meta"><span>Candid blog</span><span class="go">Read ↗</span></div>
+              <div class="meta">
+                <button class="type-tag" type="button" data-filter="writing" title="Show all Writing">Writing</button>
+                <span class="src">Candid blog</span>
+                <span class="go">Read ↗</span>
+              </div>
             </div>
-          </a>
+          </article>
+          <article class="artifact" data-type="talk">
+            <div class="body">
+              <h3><a class="card-link" href="https://www.peakgrantmaking.org/insights/exploring-how-to-share-and-reuse-nonprofit-data/" target="_blank" rel="noopener">Exploring how to share and reuse nonprofit data</a></h3>
+              <p>A PEAK Grantmaking panel on reusing nonprofit data to save nonprofits time. The blog post quotes what I shared.</p>
+              <div class="meta">
+                <button class="type-tag" type="button" data-filter="talk" title="Show all Speaking">Panel</button>
+                <span class="src">PEAK Grantmaking</span>
+                <span class="go">Read ↗</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
