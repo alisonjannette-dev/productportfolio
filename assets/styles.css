@@ -294,6 +294,7 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
   font-style: italic; margin: 0;
 }
 .about-grid .pull::before { content: "“"; color: var(--accent); font-size: 1.6em; line-height: 0; vertical-align: -0.35em; margin-right: 4px; }
+.about-grid .pull::after { content: "”"; color: var(--accent); font-size: 1.6em; line-height: 0; vertical-align: -0.35em; margin-left: 2px; }
 .about-body p { margin: 0 0 1.1em; color: var(--ink-2); }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; }
 .principle {
