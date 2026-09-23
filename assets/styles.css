@@ -355,10 +355,18 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 .product p { margin: 0; font-size: 14px; color: var(--ink-2); }
 .product .result { margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--ink); }
 .product .result::before { content: "→ "; color: var(--accent); }
+.product-grid.three { grid-template-columns: repeat(3, 1fr); }
+.product .co { font-size: 11px; margin-bottom: 6px; }
+.product h5 a { text-decoration: none; }
+.more-launches { margin-top: 20px; }
+.more-launches > h3 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 18px; }
+.more-launches .product { background: var(--card); border: 1.5px solid var(--ink); transition: transform .2s ease, box-shadow .2s ease; }
+.more-launches .product:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+@media (max-width: 960px) { .product-grid.three { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 760px) {
   .initiative-head { grid-template-columns: 1fr; gap: 16px; }
   .metrics { text-align: left; grid-template-columns: repeat(2, 1fr); }
-  .psr, .product-grid { grid-template-columns: 1fr; gap: 16px; }
+  .psr, .product-grid, .product-grid.three { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* ---------- Artifacts ---------- */
