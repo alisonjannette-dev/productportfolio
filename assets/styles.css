@@ -353,6 +353,12 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 .product p { margin: 0; font-size: 14px; color: var(--ink-2); }
 .product .result { margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--ink); }
 .product .result::before { content: "→ "; color: var(--accent); }
+.product .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.product .links a {
+  font-family: var(--mono); font-size: 11px; text-decoration: none;
+  padding: 3px 9px; border-radius: 999px; border: 1px solid var(--ink); color: var(--ink);
+}
+.product .links a:hover { background: var(--ink); color: var(--paper); }
 .product-grid.three { grid-template-columns: repeat(3, 1fr); }
 .product .co { font-size: 11px; margin-bottom: 6px; }
 .product h5 a { text-decoration: none; }
