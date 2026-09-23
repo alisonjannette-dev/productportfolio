@@ -106,9 +106,12 @@ body.weird h1, body.weird h2, body.weird h3 {
 }
 .eyebrow::before {
   content: "";
+  flex: none;
   width: 22px; height: 2px;
   background: var(--accent);
 }
+.hero .eyebrow { align-items: flex-start; line-height: 1.6; }
+.hero .eyebrow::before { margin-top: .75em; }
 
 /* ---------- Nav ---------- */
 .nav {
@@ -204,8 +207,6 @@ body.weird h1, body.weird h2, body.weird h3 {
 }
 .squiggle path { stroke: var(--sun); stroke-width: 6; fill: none; stroke-linecap: round; }
 .hero .lede { font-size: clamp(18px, 2vw, 21px); color: var(--ink-2); max-width: 34em; margin: 0 0 32px; }
-.hero .lede:has(+ .hello) { margin-bottom: 14px; }
-.hero .lede.hello { color: var(--ink); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
 
 .portrait {
@@ -237,6 +238,7 @@ body.weird h1, body.weird h2, body.weird h3 {
   font-family: var(--mono); font-size: 12px; letter-spacing: .04em;
   transform: rotate(-6deg); box-shadow: var(--shadow);
   display: flex; align-items: center; gap: 8px;
+  white-space: nowrap;
 }
 .badge-sticker .live {
   width: 8px; height: 8px; border-radius: 50%; background: #2fb36b;
@@ -251,7 +253,7 @@ body.weird h1, body.weird h2, body.weird h3 {
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; }
   .portrait { justify-self: start; max-width: 260px; order: -1; }
-  .badge-sticker { left: auto; right: -20px; bottom: 16px; }
+  .badge-sticker { left: 12px; right: auto; bottom: 16px; font-size: 11px; }
 }
 
 /* ---------- Marquee ---------- */
