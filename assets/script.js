@@ -1,0 +1,139 @@
+/* Product Portfolio — tiny bit of behavior. No dependencies. */
+(function () {
+  "use strict";
+
+  var KEY = "portfolio-after-hours";
+  var body = document.body;
+  var toggle = document.querySelector(".weird-toggle");
+
+  function store(value) {
+    try { localStorage.setItem(KEY, value ? "1" : "0"); } catch (e) { /* private mode, etc. */ }
+  }
+  function stored() {
+    try { return localStorage.getItem(KEY) === "1"; } catch (e) { return false; }
+  }
+
+  // ---------- Toast ----------
+  var toastEl;
+  var toastTimer;
+  function toast(msg) {
+    if (!toastEl) {
+      toastEl = document.createElement("div");
+      toastEl.className = "toast";
+      toastEl.setAttribute("role", "status");
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove("show"); }, 3200);
+  }
+
+  // ---------- Confetti ----------
+  function confetti() {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var colors = ["#ff3d8b", "#c6f432", "#7c3aed", "#f2c14e", "#3b5bdb", "#d9482b"];
+    for (var i = 0; i < 80; i++) {
+      var c = document.createElement("div");
+      c.className = "confetti";
+      c.style.left = Math.random() * 100 + "vw";
+      c.style.background = colors[i % colors.length];
+      c.style.animationDuration = 1.8 + Math.random() * 2 + "s";
+      c.style.animationDelay = Math.random() * 0.4 + "s";
+      if (i % 3 === 0) c.style.borderRadius = "50%";
+      document.body.appendChild(c);
+      setTimeout(c.remove.bind(c), 4500);
+    }
+  }
+
+  // ---------- After-hours mode ----------
+  var lines = [
+    "Okay, you get to see the real me now.",
+    "Welcome to after hours. Snacks are in the back.",
+    "You found the fun part. Tell no one (tell everyone)."
+  ];
+  function setWeird(on, announce) {
+    body.classList.toggle("weird", on);
+    if (toggle) toggle.setAttribute("aria-pressed", on ? "true" : "false");
+    store(on);
+    if (announce) {
+      if (on) { toast(lines[Math.floor(Math.random() * lines.length)]); confetti(); }
+      else { toast("Back to business. Blazer: on."); }
+    }
+  }
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      setWeird(!body.classList.contains("weird"), true);
+    });
+  }
+  if (stored()) setWeird(true, false);
+
+  // Konami code also unlocks it: ↑ ↑ ↓ ↓ ← → ← → b a
+  var code = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+  var pos = 0;
+  document.addEventListener("keydown", function (e) {
+    pos = e.key === code[pos] ? pos + 1 : (e.key === code[0] ? 1 : 0);
+    if (pos === code.length) {
+      pos = 0;
+      setWeird(true, false);
+      confetti();
+      toast("Cheat code accepted. +30 lives, +1 new favorite PM.");
+    }
+  });
+
+  // Clicking the logo dot five times in a row does the same thing.
+  var logo = document.querySelector(".logo");
+  var clicks = 0;
+  var clickTimer;
+  if (logo) {
+    logo.addEventListener("click", function (e) {
+      clicks++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(function () { clicks = 0; }, 1200);
+      if (clicks >= 5) {
+        e.preventDefault();
+        clicks = 0;
+        setWeird(!body.classList.contains("weird"), true);
+      }
+    });
+  }
+
+  // ---------- Artifact filters ----------
+  var filters = document.querySelectorAll(".filter");
+  var artifacts = document.querySelectorAll(".artifact");
+  filters.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var type = btn.getAttribute("data-filter");
+      filters.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      artifacts.forEach(function (a) {
+        a.hidden = !(type === "all" || a.getAttribute("data-type") === type);
+      });
+    });
+  });
+
+  // Artifacts that don't have a real file yet
+  document.querySelectorAll('a.artifact[href="#"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      toast("This one's available on request — just ask!");
+    });
+  });
+
+  // ---------- Print resume ----------
+  var printBtn = document.querySelector("[data-print]");
+  if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
+
+  // ---------- Footer year ----------
+  document.querySelectorAll("[data-year]").forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
+  // ---------- Hello, fellow view-sourcer ----------
+  try {
+    console.log(
+      "%cHi, you opened the console. We'd get along.%c\nTry the Konami code, or flip the 'after hours' switch.",
+      "font: 600 16px Georgia, serif; color: #d9482b;",
+      "font: 12px monospace; color: #7a7368;"
+    );
+  } catch (e) { /* noop */ }
+})();
