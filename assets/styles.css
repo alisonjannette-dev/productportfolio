@@ -390,20 +390,20 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 .artifact:hover { color: inherit; transform: translate(-3px, -3px) rotate(-0.4deg); box-shadow: var(--shadow); }
 body.weird .artifact:nth-child(odd):hover { transform: translate(-3px, -3px) rotate(1.2deg); }
 .artifact .thumb {
-  aspect-ratio: 16 / 9; border-bottom: 1.5px solid var(--ink);
+  height: 64px; border-bottom: 1.5px solid var(--ink);
   position: relative; overflow: hidden;
-  display: grid; place-items: center;
+  display: flex; align-items: center; padding: 0 20px;
 }
 .artifact .thumb .kind {
-  font-family: var(--serif); font-style: italic; font-size: 34px; color: #1b1a17;
+  font-family: var(--serif); font-style: italic; font-size: 20px; color: #1b1a17;
   position: relative; z-index: 1;
+  background: #fffdf8; padding: 1px 12px; border-radius: 999px; border: 1.5px solid #1b1a17;
 }
 .artifact[data-type="strategy"] .thumb { background: repeating-linear-gradient(45deg, var(--sun) 0 14px, #f6d67f 14px 28px); }
 .artifact[data-type="prd"] .thumb { background: radial-gradient(circle, #1b1a17 1.5px, transparent 1.6px) 0 0/16px 16px, var(--mint); }
 .artifact[data-type="writing"] .thumb { background: repeating-linear-gradient(0deg, #c8d3ff 0 2px, #e5eaff 2px 22px); }
 .artifact[data-type="talk"] .thumb { background: radial-gradient(circle at 50% 120%, #f59e82 0 30%, #f7b6a3 30% 45%, #fbd3c5 45% 60%, #fde8df 60%); }
 .artifact[data-type="deck"] .thumb { background: conic-gradient(from 45deg, #f2c14e, #d9482b, #3b5bdb, #9ad1b9, #f2c14e); }
-.artifact[data-type="deck"] .thumb .kind { background: #fffdf8; padding: 2px 14px; border-radius: 999px; border: 1.5px solid #1b1a17; }
 .artifact .body { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .artifact h3 { font-size: 22px; }
 .artifact p { margin: 0; color: var(--ink-2); font-size: 15px; }
