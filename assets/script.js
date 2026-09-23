@@ -49,7 +49,7 @@
   // ---------- After-hours mode ----------
   var lines = [
     "Okay, you get to see the real me now.",
-    "Welcome to after hours. Snacks are in the back.",
+    "Welcome to after hours. Controllers are in the back.",
     "You found the fun part. Tell no one (tell everyone)."
   ];
   function setWeird(on, announce) {

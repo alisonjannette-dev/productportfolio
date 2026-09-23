@@ -10,12 +10,12 @@ A simple static portfolio site: plain HTML, CSS, and a little JavaScript. There'
 
 ## Editing content
 
-All the copy is placeholder. Search each HTML file for these and replace them:
+Content comes from Alison's Google Site. These are still placeholders:
 - **Name and contact details**: `Alison Jannette`, `hello@example.com`, the LinkedIn URL
-- **Photo**: add `assets/headshot.jpg`, then in `index.html` replace the `AJ` initials div with the `<img>` line in the comment above it
+- **Photo**: save your headshot as `assets/headshot.jpg`. It replaces the `AJ` initials automatically.
 - **Launches**: copy or edit an `<article class="launch">` block
-- **Artifacts**: copy or edit an `<a class="artifact">` block. Set `href` to a file in `artifacts/` or to a link (Google Doc, Notion, Figma). Set `data-type` to `strategy`, `prd`, `research`, `roadmap`, or `deck`. If you leave `href="#"`, clicking it shows "available on request."
-- **Resume**: edit the `<div class="job">` blocks in `resume.html`
+- **Artifacts**: copy or edit an `<a class="artifact">` block. Set `href` to a file in `artifacts/` or to a link (Google Doc, Notion, Figma). Set `data-type` to `deck`, `prd`, `writing`, or `talk`. If you leave `href="#"`, clicking it shows "available on request."
+- **Resume**: add job titles and dates in the `<div class="job">` blocks in `resume.html` (currently `Your title` / `Dates`)
 
 ## The weird part
 
