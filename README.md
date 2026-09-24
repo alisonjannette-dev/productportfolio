@@ -22,7 +22,7 @@ Content in elements with the class `after-hours` only appears in after-hours mod
 
 ## Preview locally
 
-Open `index.html` in a browser, or run `python3 -m http.server` and go to http://localhost:8000.
+Run `python3 -m http.server` in this folder and go to http://localhost:8000. (Opening `index.html` directly works too, but links back to the home page only resolve when the site is served.)
 
 ## Publish (GitHub Pages)
 
