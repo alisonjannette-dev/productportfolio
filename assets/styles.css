@@ -216,29 +216,10 @@ body.weird h1, body.weird h2, body.weird h3 {
   background: var(--accent); z-index: -1;
 }
 
-.badge-sticker {
-  position: absolute; left: -28px; bottom: 36px;
-  background: var(--card); border: 1.5px solid var(--ink);
-  border-radius: 999px; padding: 10px 16px;
-  font-family: var(--mono); font-size: 12px; letter-spacing: .04em;
-  transform: rotate(-6deg); box-shadow: var(--shadow);
-  display: flex; align-items: center; gap: 8px;
-  white-space: nowrap;
-}
-.badge-sticker .live {
-  width: 8px; height: 8px; border-radius: 50%; background: #2fb36b;
-  box-shadow: 0 0 0 0 rgba(47,179,107,.6); animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(47,179,107,.55); }
-  70% { box-shadow: 0 0 0 10px rgba(47,179,107,0); }
-  100% { box-shadow: 0 0 0 0 rgba(47,179,107,0); }
-}
 
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; }
   .portrait { justify-self: start; max-width: 260px; order: -1; }
-  .badge-sticker { left: 12px; right: auto; bottom: 16px; font-size: 11px; }
 }
 
 /* ---------- Marquee ---------- */
