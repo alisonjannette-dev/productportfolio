@@ -59,13 +59,6 @@
       else { toast("Back to business. Blazer: on."); }
     }
   }
-  // Hidden switch: the "little weirdness" link in the footer
-  document.querySelectorAll("[data-weird-toggle]").forEach(function (el) {
-    el.addEventListener("click", function (e) {
-      e.preventDefault();
-      setWeird(!body.classList.contains("weird"), true);
-    });
-  });
   if (stored()) setWeird(true, false);
 
   // Konami code also unlocks it: ↑ ↑ ↓ ↓ ← → ← → b a
