@@ -4,7 +4,6 @@
 
   var KEY = "portfolio-after-hours";
   var body = document.body;
-  var toggle = document.querySelector(".weird-toggle");
 
   function store(value) {
     try { localStorage.setItem(KEY, value ? "1" : "0"); } catch (e) { /* private mode, etc. */ }
@@ -54,18 +53,19 @@
   ];
   function setWeird(on, announce) {
     body.classList.toggle("weird", on);
-    if (toggle) toggle.setAttribute("aria-pressed", on ? "true" : "false");
     store(on);
     if (announce) {
       if (on) { toast(lines[Math.floor(Math.random() * lines.length)]); confetti(); }
       else { toast("Back to business. Blazer: on."); }
     }
   }
-  if (toggle) {
-    toggle.addEventListener("click", function () {
+  // Hidden switch: the "little weirdness" link in the footer
+  document.querySelectorAll("[data-weird-toggle]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
       setWeird(!body.classList.contains("weird"), true);
     });
-  }
+  });
   if (stored()) setWeird(true, false);
 
   // Konami code also unlocks it: ↑ ↑ ↓ ↓ ← → ← → b a
@@ -141,7 +141,7 @@
   // ---------- Hello, fellow view-sourcer ----------
   try {
     console.log(
-      "%cHi, you opened the console. We'd get along.%c\nTry the Konami code, or flip the 'after hours' switch.",
+      "%cHi, you opened the console. We'd get along.%c\nTry the Konami code.",
       "font: 600 16px Georgia, serif; color: #d9482b;",
       "font: 12px monospace; color: #7a7368;"
     );

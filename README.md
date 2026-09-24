@@ -18,7 +18,7 @@ Content comes from Alison's Google Site and resume. These are still open:
 
 ## The weird part
 
-Content in elements with the class `after-hours` only appears when a visitor turns on the **After hours** switch in the nav. It also turns on with the Konami code (↑ ↑ ↓ ↓ ← → ← → b a) or by clicking the logo five times. Put your fun facts there.
+Content in elements with the class `after-hours` only appears in after-hours mode. Visitors turn it on by clicking "little weirdness" in the home page footer, typing the Konami code (↑ ↑ ↓ ↓ ← → ← → b a), or clicking the logo five times. Put your fun facts there.
 
 ## Preview locally
 
