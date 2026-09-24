@@ -384,7 +384,7 @@ body.weird .artifact:nth-child(odd):hover { transform: translate(-3px, -3px) rot
 /* ---------- Contact ---------- */
 .contact { background: var(--ink); color: var(--paper); text-align: center; }
 .contact .eyebrow { color: color-mix(in srgb, var(--paper) 65%, transparent); }
-.contact h2 { font-size: clamp(44px, 8vw, 96px); margin: 18px 0 20px; }
+.contact h2 { font-size: clamp(44px, 8vw, 96px); margin: 0 0 20px; }
 .contact h2 em { color: var(--sun); }
 .contact p { color: color-mix(in srgb, var(--paper) 75%, transparent); max-width: 32em; margin: 0 auto 32px; }
 .contact .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
