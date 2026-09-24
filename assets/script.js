@@ -82,11 +82,26 @@
   });
 
   // Clicking the logo dot five times in a row does the same thing.
+  // Clean addresses: /index.html -> /, /resume.html -> /resume
+  function cleanPath() {
+    if (!history.replaceState || location.protocol === "file:") return;
+    var clean = location.pathname.replace(/index\.html$/, "").replace(/\.html$/, "");
+    if (clean !== location.pathname) history.replaceState(null, "", clean + location.search + location.hash);
+  }
+  cleanPath();
+
   var logo = document.querySelector(".logo");
+  var onHome = !!document.getElementById("about");
   var clicks = 0;
   var clickTimer;
   if (logo) {
     logo.addEventListener("click", function (e) {
+      // Already home: scroll to the top instead of reloading
+      if (onHome) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        if (location.hash && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
+      }
       clicks++;
       clearTimeout(clickTimer);
       clickTimer = setTimeout(function () { clicks = 0; }, 1200);

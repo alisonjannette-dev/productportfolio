@@ -22,7 +22,7 @@ Content in elements with the class `after-hours` only appears in after-hours mod
 
 ## Preview locally
 
-Run `python3 -m http.server` in this folder and go to http://localhost:8000. (Opening `index.html` directly works too, but links back to the home page only resolve when the site is served.)
+Run `npx serve .` in this folder and open the address it prints. It serves clean URLs like `/resume`, the same way GitHub Pages does. (`python3 -m http.server` and opening `index.html` directly don't support clean URLs, so the Resume link won't resolve there.)
 
 ## Publish (GitHub Pages)
 
