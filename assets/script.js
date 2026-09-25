@@ -31,7 +31,7 @@
   // ---------- Confetti ----------
   function confetti() {
     if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var colors = ["#ff3d8b", "#c6f432", "#7c3aed", "#f2c14e", "#3b5bdb", "#d9482b"];
+    var colors = ["#ff3d8b", "#c6f432", "#7c3aed", "#cbb8f2", "#3b5bdb", "#6e50bd"];
     for (var i = 0; i < 80; i++) {
       var c = document.createElement("div");
       c.className = "confetti";
@@ -150,7 +150,7 @@
   try {
     console.log(
       "%cHi, you opened the console. We'd get along.%c\nTry the Konami code.",
-      "font: 600 16px Georgia, serif; color: #d9482b;",
+      "font: 600 16px Georgia, serif; color: #6e50bd;",
       "font: 12px monospace; color: #7a7368;"
     );
   } catch (e) { /* noop */ }

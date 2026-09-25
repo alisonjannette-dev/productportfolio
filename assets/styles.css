@@ -11,10 +11,10 @@
   --ink-2: #4a463f;
   --muted: #7a7368;
   --line: #d9cfbd;
-  --accent: #d9482b;        /* tomato */
+  --accent: #6e50bd;        /* lavender */
   --accent-ink: #fffdf8;
   --pop: #3b5bdb;           /* cobalt */
-  --sun: #f2c14e;           /* mustard */
+  --sun: #cbb8f2;           /* light lilac */
   --mint: #9ad1b9;
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -36,7 +36,7 @@
     --ink-2: #cfc6b4;
     --muted: #978f80;
     --line: #3a362c;
-    --accent: #ff6a4a;
+    --accent: #b9a3ff;
     --accent-ink: #16150f;
     --pop: #8aa2ff;
   }
@@ -49,7 +49,7 @@
   --ink-2: #cfc6b4;
   --muted: #978f80;
   --line: #3a362c;
-  --accent: #ff6a4a;
+  --accent: #b9a3ff;
   --accent-ink: #16150f;
   --pop: #8aa2ff;
 }
@@ -376,9 +376,9 @@ body.weird .artifact:nth-child(odd):hover { transform: translate(-3px, -3px) rot
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .type-tag:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 #1b1a17; }
-.artifact[data-type="deck"] .type-tag { background: #f6d67f; }
-.artifact[data-type="writing"] .type-tag { background: #dfe6ff; }
-.artifact[data-type="talk"] .type-tag { background: #fbd3c5; }
+.artifact[data-type="deck"] .type-tag { background: #e3d8fb; }
+.artifact[data-type="writing"] .type-tag { background: #d6efe4; }
+.artifact[data-type="talk"] .type-tag { background: #f3d6ea; }
 .artifact[hidden] { display: none; }
 
 /* ---------- Contact ---------- */
@@ -511,7 +511,7 @@ body.weird .hero h1 em { display: inline-block; animation: tilt 3s ease-in-out i
 
 /* ---------- Print (resume) ---------- */
 @media print {
-  :root { --paper: #fff; --card: #fff; --paper-2: #f6f3ee; --ink: #111; --ink-2: #333; --muted: #666; --line: #ccc; --accent: #c23b20; }
+  :root { --paper: #fff; --card: #fff; --paper-2: #f6f3ee; --ink: #111; --ink-2: #333; --muted: #666; --line: #ccc; --accent: #5f43ad; }
   body, body.weird { background: #fff !important; font-size: 11pt; }
   .nav, footer, .resume-actions, .after-hours, .sticker, .toast, .no-print { display: none !important; }
   .resume-page { padding: 0; }
