@@ -24,6 +24,10 @@ The site follows the visitor's system setting. The sun/moon button in the menu s
 
 Content in elements with the class `after-hours` only appears in after-hours mode. Visitors turn it on by typing the Konami code (↑ ↑ ↓ ↓ ← → ← → b a), or clicking the logo five times. Put your fun facts there.
 
+## Updating CSS or JavaScript
+
+`index.html` and `resume.html` load `assets/styles.css?v=…` and `assets/script.js?v=…`. When you change either file, bump the `v=` value in both pages so browsers load the new version right away.
+
 ## Preview locally
 
 Run `npx serve .` in this folder and open the address it prints. It serves clean URLs like `/resume`, the same way GitHub Pages does. (`python3 -m http.server` and opening `index.html` directly don't support clean URLs, so the Resume link won't resolve there.)
