@@ -12,6 +12,28 @@
     try { return localStorage.getItem(KEY) === "1"; } catch (e) { return false; }
   }
 
+  // ---------- Light / dark mode ----------
+  var root = document.documentElement;
+  var darkQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function currentTheme() {
+    return root.getAttribute("data-theme") || (darkQuery && darkQuery.matches ? "dark" : "light");
+  }
+  function labelThemeToggle() {
+    var next = currentTheme() === "dark" ? "light" : "dark";
+    document.querySelectorAll(".theme-toggle").forEach(function (b) {
+      b.setAttribute("aria-label", "Switch to " + next + " mode");
+    });
+  }
+  document.querySelectorAll(".theme-toggle").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) { /* private mode, etc. */ }
+      labelThemeToggle();
+    });
+  });
+  labelThemeToggle();
+
   // ---------- Toast ----------
   var toastEl;
   var toastTimer;

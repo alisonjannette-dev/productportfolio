@@ -5,7 +5,7 @@ A simple static portfolio site: plain HTML, CSS, and a little JavaScript. There'
 - `index.html`: bio, launches, artifact library, and contact
 - `resume.html`: the resume page. Click **Download PDF** to print it cleanly.
 - `assets/styles.css`: all styling. Colors are set as variables at the top.
-- `assets/script.js`: the after-hours mode, artifact filters, and easter eggs
+- `assets/script.js`: the light/dark toggle, after-hours mode, artifact filters, and easter eggs
 - `artifacts/`: put your PDFs and other work samples here
 
 ## Editing content
@@ -15,6 +15,10 @@ Content comes from Alison's Google Site and resume. These are still open:
 - **Launches**: copy or edit an `<article class="launch">` block
 - **Artifacts**: copy or edit an `<a class="artifact">` block. Set `href` to a file in `artifacts/` or to a link (Google Doc, Notion, Figma). Set `data-type` to `deck`, `prd`, `writing`, or `talk`. If you leave `href="#"`, clicking it shows "available on request."
 - **Resume**: edit the `<div class="job">` blocks in `resume.html`
+
+## Light and dark mode
+
+The site follows the visitor's system setting. The sun/moon button in the menu switches modes and remembers the choice.
 
 ## The weird part
 

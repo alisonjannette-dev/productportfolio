@@ -16,6 +16,7 @@
   --pop: #3b5bdb;           /* cobalt */
   --sun: #cbb8f2;           /* light lilac */
   --mint: #9ad1b9;
+  --on-ink-accent: var(--sun); /* accent used on ink-colored sections */
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
@@ -39,6 +40,7 @@
     --accent: #b9a3ff;
     --accent-ink: #16150f;
     --pop: #8aa2ff;
+    --on-ink-accent: #6e50bd;
   }
 }
 :root[data-theme="dark"] {
@@ -52,6 +54,7 @@
   --accent: #b9a3ff;
   --accent-ink: #16150f;
   --pop: #8aa2ff;
+  --on-ink-accent: #6e50bd;
 }
 
 /* ---------- After-hours (weird) mode palette ---------- */
@@ -149,6 +152,22 @@ body.weird h1, body.weird h2, body.weird h3 {
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--ink); }
 .nav-links a[aria-current="page"] { font-weight: 600; }
 
+.theme-toggle {
+  display: inline-grid; place-items: center; width: 34px; height: 34px; padding: 0;
+  border-radius: 50%; border: 1px solid var(--line); background: none; color: var(--ink-2); cursor: pointer;
+  transition: border-color .2s ease, color .2s ease, transform .3s ease;
+}
+.theme-toggle:hover { border-color: var(--ink); color: var(--ink); transform: rotate(-15deg); }
+.theme-toggle svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .icon-moon path { fill: currentColor; stroke: none; }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+}
+
 
 .menu-btn { display: none; }
 
@@ -231,7 +250,7 @@ body.weird h1, body.weird h2, body.weird h3 {
   padding: 12px 0;
 }
 .marquee .track { display: inline-flex; gap: 40px; animation: scroll 70s linear infinite; padding-left: 40px; }
-.marquee span::after { content: "✺"; margin-left: 40px; color: var(--sun); font-style: normal; }
+.marquee span::after { content: "✺"; margin-left: 40px; color: var(--on-ink-accent); font-style: normal; }
 @keyframes scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
   .marquee .track { animation: none; }
@@ -385,7 +404,7 @@ body.weird .artifact:nth-child(odd):hover { transform: translate(-3px, -3px) rot
 .contact { background: var(--ink); color: var(--paper); text-align: center; }
 .contact .eyebrow { color: color-mix(in srgb, var(--paper) 65%, transparent); }
 .contact h2 { font-size: clamp(44px, 8vw, 96px); margin: 0 0 20px; }
-.contact h2 em { color: var(--sun); }
+.contact h2 em { color: var(--on-ink-accent); }
 .contact p { color: color-mix(in srgb, var(--paper) 75%, transparent); max-width: 32em; margin: 0 auto 32px; }
 .contact .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
 .contact .btn:hover { color: var(--ink); box-shadow: 4px 4px 0 var(--accent); }
