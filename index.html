@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20260927e">
+  <link rel="stylesheet" href="assets/styles.css?v=20260927f">
   <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%236e50bd'/></svg>">
   <script type="application/ld+json">
@@ -144,49 +144,42 @@
           <p>A data platform is one trusted source of truth, delivered wherever customers already build. AI shows up in two places: it makes the data better on the way in, and it's a new way for people and agents to use it on the way out.</p>
         </div>
 
-        <div class="pf" role="img" aria-label="Data platform framework: collect and aggregate sources, transform and enhance them, publish one governed schema of data products, and deliver it through every channel customers use, including APIs, cloud marketplaces, webhooks, and MCP for AI agents.">
-          <div class="pf-row pf-in">
+        <div class="pf" role="img" aria-label="Data platform framework in three steps, left to right: 1 aggregate first-party, third-party, and publicly available data; 2 enhance it into one common schema with proprietary data science models, algorithms, and humans in the loop; 3 make it accessible through APIs, datasets, cloud marketplaces, webhooks, MCP for AI agents, plug-ins, and integration partners. Developer documentation, solutions engineering, customer support, and partners support every step.">
+          <div class="pf-flow">
             <div class="pf-stage">
-              <div class="pf-step"><span>1</span>Collect · ingest · aggregate</div>
+              <div class="pf-step"><span>1</span>Aggregate</div>
               <ul>
-                <li><b>First-party sources</b><span>sensors, networks, and data we own</span></li>
-                <li><b>Public &amp; government records</b><span>filings, agency data, and public programs</span></li>
-                <li><b>Contributed data</b><span>data customers and users submit themselves</span></li>
-                <li><b>Curated &amp; third-party</b><span>news, licensed, and partner data that adds context</span></li>
-                <li><b>Models &amp; AI</b><span>statistical, ML, and AI models that fill gaps</span></li>
+                <li><b>First-party data</b><span>sensors, networks, and data we own or users contribute</span></li>
+                <li><b>Third-party data</b><span>licensed, partner, and curated sources</span></li>
+                <li><b>Publicly available data</b><span>government filings, agency data, and public records</span></li>
               </ul>
             </div>
-            <div class="pf-stage">
-              <div class="pf-step"><span>2</span>Transform · enhance</div>
+
+            <div class="pf-arrow" aria-hidden="true">→</div>
+
+            <div class="pf-stage pf-core">
+              <div class="pf-step"><span>2</span>Enhance</div>
               <ul>
-                <li><b>Data science &amp; algorithms</b><span>clean, standardize, match, and derive new signals</span></li>
-                <li><b>Enrichment</b><span>add context like categories, geography, and relationships</span></li>
-                <li><b>Human expertise</b><span>experts validate what we publish</span></li>
-                <li><b>Proprietary indices</b><span>differentiated products no one else has</span></li>
+                <li><b>One common schema</b><span>every source standardized, matched, and governed</span></li>
+                <li><b>Proprietary data science models</b><span>derive signals and fill gaps, including AI/ML</span></li>
+                <li><b>Algorithms</b><span>indices and enrichment no one else has</span></li>
+                <li><b>Humans in the loop</b><span>experts validate what we publish</span></li>
               </ul>
             </div>
-          </div>
 
-          <div class="pf-arrow" aria-hidden="true">↓</div>
+            <div class="pf-arrow" aria-hidden="true">→</div>
 
-          <div class="pf-core">
-            <div class="pf-step"><span>3</span>One schema · AI-agent ready · cloud agnostic</div>
-            <div class="pf-chips">
-              <span>Historical</span><span>Real-time</span><span>Forecast</span><span>Derived indices</span><span>Alerts &amp; events</span><span>Reference data</span>
-            </div>
-          </div>
-
-          <div class="pf-arrow" aria-hidden="true">↓</div>
-
-          <div class="pf-out">
-            <div class="pf-step"><span>4</span>Deliver wherever customers build</div>
-            <div class="pf-channels">
-              <span>APIs</span><span>Datasets</span><span>Snowflake</span><span>Databricks</span><span>Webhooks</span><span>WebSockets</span><span class="ai">Agent SDKs / MCP</span><span>Plug-ins</span><span>Integration partners</span><span>GIS &amp; maps</span><span>Flat files</span>
+            <div class="pf-stage">
+              <div class="pf-step"><span>3</span>Accessibility</div>
+              <p class="pf-sub">Deliver wherever customers build</p>
+              <div class="pf-channels">
+                <span>APIs</span><span>Datasets</span><span>Snowflake</span><span>Databricks</span><span>Webhooks</span><span>WebSockets</span><span class="ai">Agent SDKs / MCP</span><span>Plug-ins</span><span>Integration partners</span><span>GIS &amp; maps</span><span>Flat files</span>
+              </div>
             </div>
           </div>
 
           <div class="pf-enable">
-            <div class="pf-step"><span>5</span>Enable &amp; support: the people who make it work</div>
+            <div class="pf-step">Around every step: enable &amp; support</div>
             <div class="pf-roles">
               <div><b>Developer documentation</b><span>Shortens sales cycles, teaches users, and helps them discover what the platform can do on their own.</span></div>
               <div><b>Solutions engineering</b><span>Educates buyers before the sale and helps customers design and troubleshoot integrations after it.</span></div>
@@ -551,6 +544,6 @@
     </div>
   </footer>
 
-  <script src="assets/script.js?v=20260927e"></script>
+  <script src="assets/script.js?v=20260927f"></script>
 </body>
 </html>
