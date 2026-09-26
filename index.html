@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20260927b">
+  <link rel="stylesheet" href="assets/styles.css?v=20260927d">
   <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%236e50bd'/></svg>">
   <script type="application/ld+json">
@@ -131,6 +131,60 @@
             <p>Observe, hypothesize, experiment, and measure. Let data guide decisions, and improve every cycle.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ PLATFORM ============ -->
+    <section id="platform" class="platform">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>How I think about data platforms</h2>
+          </div>
+          <p>A data platform is one trusted source of truth, delivered wherever customers already build. AI shows up in two places: it makes the data better on the way in, and it's a new way for people and agents to use it on the way out.</p>
+        </div>
+
+        <div class="pf" role="img" aria-label="Data platform framework: collect and aggregate sources, transform and enhance them, publish one governed schema of data products, and deliver it through every channel customers use, including APIs, cloud marketplaces, webhooks, and MCP for AI agents.">
+          <div class="pf-row pf-in">
+            <div class="pf-stage">
+              <div class="pf-step"><span>1</span>Collect · ingest · aggregate</div>
+              <ul>
+                <li><b>First-party sources</b><span>sensors, networks, and data we own</span></li>
+                <li><b>Partner &amp; observation networks</b><span>agencies, partners, and public programs</span></li>
+                <li><b>Models &amp; AI</b><span>statistical, ML, and AI models that fill gaps</span></li>
+                <li><b>Third-party &amp; licensed</b><span>licensed and open data that adds context</span></li>
+              </ul>
+            </div>
+            <div class="pf-stage">
+              <div class="pf-step"><span>2</span>Transform · enhance</div>
+              <ul>
+                <li><b>Data science &amp; algorithms</b><span>clean, standardize, and derive new signals</span></li>
+                <li><b>Human expertise</b><span>experts validate what we publish</span></li>
+                <li><b>Proprietary indices</b><span>differentiated products no one else has</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pf-arrow" aria-hidden="true">↓</div>
+
+          <div class="pf-core">
+            <div class="pf-step"><span>3</span>One schema · AI-agent ready · cloud agnostic</div>
+            <div class="pf-chips">
+              <span>Historical</span><span>Real-time</span><span>Forecast</span><span>Derived indices</span><span>Alerts &amp; events</span><span>Reference data</span>
+            </div>
+          </div>
+
+          <div class="pf-arrow" aria-hidden="true">↓</div>
+
+          <div class="pf-out">
+            <div class="pf-step"><span>4</span>Deliver wherever customers build</div>
+            <div class="pf-channels">
+              <span>APIs</span><span>Snowflake</span><span>Databricks</span><span>Webhooks</span><span>WebSockets</span><span class="ai">Agent SDKs / MCP</span><span>GIS &amp; maps</span><span>Flat files</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="pf-note">I've applied this at AccuWeather's Data Suite and at Candid's nonprofit data network: invest once in clean, governed data, then add channels, including AI, as customers' workflows change.</p>
       </div>
     </section>
 
@@ -472,6 +526,6 @@
     </div>
   </footer>
 
-  <script src="assets/script.js?v=20260927b"></script>
+  <script src="assets/script.js?v=20260927d"></script>
 </body>
 </html>
