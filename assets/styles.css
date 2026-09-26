@@ -334,6 +334,19 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 .pf-roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .pf-roles b { display: block; font-family: var(--serif); font-weight: 500; font-size: 18px; margin-bottom: 4px; }
 .pf-roles span { font-size: 14px; color: var(--ink-2); }
+.pf-ai {
+  margin-top: 28px; display: grid; grid-template-columns: 1fr 2fr; gap: 28px; align-items: start;
+}
+.pf-ai-head h3 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 10px; }
+.pf-ai-head p { margin: 0; color: var(--ink-2); }
+.pf-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.pf-ai-grid > div {
+  background: var(--card); border: 1.5px solid var(--ink); border-radius: 12px; padding: 16px 18px;
+}
+.pf-ai-grid b { display: block; font-family: var(--serif); font-weight: 500; font-size: 18px; margin-bottom: 4px; }
+.pf-ai-grid span { font-size: 14px; color: var(--ink-2); }
+@media (max-width: 860px) { .pf-ai { grid-template-columns: 1fr; gap: 16px; } }
+@media (max-width: 560px) { .pf-ai-grid { grid-template-columns: 1fr; } }
 .pf-practice { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
 .pf-case { border-top: 1.5px solid var(--ink); padding-top: 14px; }
 .pf-case p { margin: 8px 0 0; font-size: 15px; color: var(--ink-2); }
