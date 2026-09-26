@@ -296,6 +296,7 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 
 /* ---------- Platform framework ---------- */
 .platform { padding-top: 0; }
+.platform .section-head p { max-width: none; flex: 1 1 100%; font-size: clamp(18px, 1.8vw, 21px); }
 .pf { display: grid; gap: 16px; }
 .pf-step {
   display: flex; align-items: center; gap: 10px;
