@@ -3,7 +3,7 @@
 A simple static portfolio site: plain HTML, CSS, and a little JavaScript. There's no build step.
 
 - `index.html`: bio, launches, artifact library, and contact
-- `resume.html`: the resume page. It embeds `Alison_Morgan_Resume.pdf` and offers it as a download. To update it, replace that PDF and the page images in `assets/resume/` (phones and browsers without a PDF viewer show the images).
+- `resume.html`: the resume page. It embeds `Alison_Morgan_Resume.pdf` and offers it as a download. To update it, replace that PDF and the page images in `assets/resume/`, then bump the `?v=` on those links in `resume.html` (phones and browsers without a PDF viewer show the images).
 - `assets/styles.css`: all styling. Colors are set as variables at the top.
 - `assets/script.js`: the light/dark toggle, after-hours mode, artifact filters, and easter eggs
 - `artifacts/`: put your PDFs and other work samples here
