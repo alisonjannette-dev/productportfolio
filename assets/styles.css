@@ -340,6 +340,9 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 }
 .pf-ai-head h3 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 10px; }
 .pf-ai-head p { margin: 0; color: var(--ink-2); }
+.pf-ai-head .pf-ai-more { margin-top: 14px; font-size: 15px; }
+.pf-ai-more a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.pf-ai-more a:hover { text-decoration: underline; }
 .pf-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .pf-ai-grid > div {
   background: var(--card); border: 1.5px solid var(--ink); border-radius: 12px; padding: 16px 18px;
