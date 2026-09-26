@@ -332,6 +332,20 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
   border: 1.5px solid var(--ink); background: var(--paper);
 }
 .pf-channels span.ai { background: var(--sun); color: #1b1a17; }
+.pf-enable {
+  border: 1.5px dashed var(--accent); border-radius: var(--radius); padding: 22px; margin-top: 4px;
+  background: color-mix(in srgb, var(--sun) 18%, transparent);
+}
+.pf-enable .pf-step { justify-content: center; }
+.pf-roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.pf-roles b { display: block; font-family: var(--serif); font-weight: 500; font-size: 18px; margin-bottom: 4px; }
+.pf-roles span { font-size: 14px; color: var(--ink-2); }
+.pf-practice { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+.pf-case { border-top: 1.5px solid var(--ink); padding-top: 14px; }
+.pf-case p { margin: 8px 0 0; font-size: 15px; color: var(--ink-2); }
+.pf-case b { color: var(--ink); }
+@media (max-width: 960px) { .pf-roles { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .pf-roles, .pf-practice { grid-template-columns: 1fr; } }
 .pf-note { margin: 22px 0 0; color: var(--ink-2); max-width: 46em; }
 @media (max-width: 760px) {
   .pf-row { grid-template-columns: 1fr; }
