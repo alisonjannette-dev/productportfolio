@@ -528,6 +528,31 @@ body.weird .hero h1 em { display: inline-block; animation: tilt 3s ease-in-out i
   .resume aside { border-right: 0; border-bottom: 1.5px solid var(--ink); }
 }
 
+/* ---------- Resume PDF embed ---------- */
+.resume-head {
+  display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.resume-head h1 { font-size: clamp(40px, 6vw, 64px); }
+.resume-head .role { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--accent); margin-top: 6px; }
+.resume-embed {
+  border: 1.5px solid var(--ink); border-radius: var(--radius); overflow: hidden;
+  box-shadow: 8px 8px 0 var(--ink); background: var(--card);
+}
+.resume-pdf { display: block; width: 100%; height: min(1150px, 85vh); border: 0; background: #fff; }
+.resume-pages { display: grid; gap: 12px; padding: 12px; background: var(--paper-2); }
+.resume-pages img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.resume-pages .btn { justify-self: center; margin: 8px 0 4px; }
+.resume-fallback { min-height: 100%; }
+.resume-mobile { display: none; }
+.no-pdf-viewer .resume-pdf { display: none; }
+.no-pdf-viewer .resume-mobile { display: grid; }
+@media (max-width: 760px) {
+  .resume-pdf { display: none; }
+  .resume-mobile { display: grid; }
+  .resume-embed { box-shadow: 5px 5px 0 var(--ink); }
+}
+
 /* ---------- Print (resume) ---------- */
 @media print {
   :root { --paper: #fff; --card: #fff; --paper-2: #f6f3ee; --ink: #111; --ink-2: #333; --muted: #666; --line: #ccc; --accent: #5f43ad; }

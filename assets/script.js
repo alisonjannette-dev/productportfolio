@@ -159,6 +159,12 @@
     });
   });
 
+  // ---------- Resume PDF ----------
+  // Browsers that can't show PDFs inline get the full-length page images instead
+  if (document.querySelector(".resume-embed") && navigator.pdfViewerEnabled === false) {
+    document.body.classList.add("no-pdf-viewer");
+  }
+
   // ---------- Print resume ----------
   var printBtn = document.querySelector("[data-print]");
   if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
