@@ -111,18 +111,10 @@ body.weird h1, body.weird h2, body.weird h3 {
   align-items: center;
   gap: 10px;
 }
-.eyebrow::before {
-  content: "";
-  flex: none;
-  width: 22px; height: 2px;
-  background: var(--accent);
-}
 .hero .eyebrow { align-items: flex-start; line-height: 1.6; }
-.hero .eyebrow::before { margin-top: .75em; }
 @media (max-width: 1100px) { .hero .eyebrow { letter-spacing: .06em; } }
 @media (max-width: 520px) {
   .hero .eyebrow { font-size: min(10px, 2.6vw); letter-spacing: 0; white-space: nowrap; }
-  .hero .eyebrow::before { display: none; }
 }
 
 /* ---------- Nav ---------- */
