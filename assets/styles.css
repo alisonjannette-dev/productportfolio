@@ -70,6 +70,7 @@ body.weird {
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 64px; }
 body {
   margin: 0;
   background: var(--paper);
@@ -250,19 +251,7 @@ body.weird h1, body.weird h2, body.weird h3 {
   .portrait { justify-self: start; max-width: 260px; order: -1; }
 }
 
-/* ---------- Marquee ---------- */
-.marquee {
-  border-block: 1.5px solid var(--ink);
-  background: var(--ink); color: var(--paper);
-  overflow: hidden; white-space: nowrap;
-  font-family: var(--serif); font-style: italic; font-size: 22px;
-  padding: 12px 0;
-}
-.marquee .track { display: inline-flex; gap: 40px; animation: scroll 70s linear infinite; padding-left: 40px; }
-.marquee span::after { content: "✺"; margin-left: 40px; color: var(--on-ink-accent); font-style: normal; }
-@keyframes scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
-  .marquee .track { animation: none; }
   * { transition: none !important; animation: none !important; }
 }
 
@@ -295,7 +284,10 @@ section { padding: clamp(64px, 9vw, 112px) 0; }
 }
 
 /* ---------- Platform framework ---------- */
-.platform { padding-top: 0; }
+.platform {
+  background: color-mix(in srgb, var(--sun) 22%, var(--paper));
+  border-block: 1px solid var(--line);
+}
 .platform .section-head p { max-width: none; flex: 1 1 100%; font-size: clamp(18px, 1.8vw, 21px); }
 .pf { display: grid; gap: 16px; }
 .pf-step {
